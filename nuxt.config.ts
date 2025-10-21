@@ -2,6 +2,9 @@
 export default defineNuxtConfig({
   devtools: { enabled: true },
   modules: ["@nuxt/ui", "@vueuse/motion/nuxt", "@nuxt/image"],
+  app: {
+    baseURL: process.env.NODE_ENV === 'production' ? '/my-first-profile-made-with-ai/' : '/',
+  },
   image: {
     q: 50,
     alias: {
